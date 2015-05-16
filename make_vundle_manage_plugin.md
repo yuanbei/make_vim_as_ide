@@ -14,5 +14,5 @@
   call vundle#rc(path)
   Bundle 'gmarik/vundle' 
   filetype plugin indent on  
-```vimscript 
+``` 
 After this settings, Vundle has been installed sucessfully.
