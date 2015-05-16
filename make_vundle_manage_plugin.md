@@ -7,12 +7,12 @@
   You could use command 'echo $VIM ' to show $VIM in vim command mode.
 ######
 3)Edit your vimrc file.
- '
+```vimscript 
   filetype off
   set rtp+=$VIM/bundle/vundle
   let path='$VIM/bundle'
   call vundle#rc(path)
   Bundle 'gmarik/vundle' 
   filetype plugin indent on  
-'
+```vimscript 
 After this settings, Vundle has been installed sucessfully.
