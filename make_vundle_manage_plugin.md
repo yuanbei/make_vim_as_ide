@@ -1,5 +1,5 @@
 ######
-1)Install Git on your windows system. Add Git's bin path on your system PATH.
+1)Install [Git](http://git-scm.com)Git on your windows system. Add Git's bin path on your system PATH.
 ######
 2)Install Vundle.
   git clone https://github.com/gmarik/vundle $VIM/bundle/vundle
@@ -14,4 +14,5 @@
   call vundle#rc(path)
   Bundle 'gmarik/vundle' 
   filetype plugin indent on  
+'''''vim code
 After this settings, Vundle has been installed sucessfully.
