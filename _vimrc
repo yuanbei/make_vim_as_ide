@@ -9,8 +9,10 @@
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
 
-" When started as "evim", evim.vim will already have done these settings.
 set nocompatible
+set backspace=indent,eol,start
+
+" When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
   finish
 endif
@@ -34,7 +36,12 @@ nnoremap <F8>  :TrinityToggleAll<CR>
 nnoremap <F9>  :TrinityToggleSourceExplorer<CR>
 nnoremap <F10> :TrinityToggleTagList<CR>
 nnoremap <F11> :TrinityToggleNERDTree<CR>
+"Settings for encoding
+set fileencodings=utf-8,gb2312,latin-1
+"set termencoding=utf-8
+"set encoding=utf-8
 
+set list
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
