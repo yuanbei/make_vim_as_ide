@@ -20,6 +20,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'jlanzarotta/bufexplorer' 
 Bundle 'Yggdroot/LeaderF'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'wannesm/wmgraphviz.vim'
+Bundle 'andviro/flake8-vim'
 
 set clipboard=unnamed
 let mapleader = "-"
@@ -47,6 +49,8 @@ nnoremap <leader>8 :TrinityToggleAll<CR>
 nnoremap <leader>9 :TrinityToggleSourceExplorer<CR>
 nnoremap <leader>10 :TrinityToggleTagList<CR>
 nnoremap <leader>11  :TrinityToggleNERDTree<CR>
+nnoremap <leader>3  :PyFlake<CR>
+nnoremap <leader>4  :PyFlakeAuto<CR>
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -62,10 +66,19 @@ set fileencodings=utf-8,gb2312,latin-1
 "Settings for fugitive----{{{
 autocmd QuickFixCmdPost *grep* cwindow
 "Settings for fugitive----}}}
-
 "Settings for theme----{{{
 syntax enable
 "Settings for theme----}}}
 "Settings for ycm----------{{{
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 "Settings for ycm----------}}}
+"Settings for flak8-------{{{
+let g:PyFlakeOnWrite = 1
+let g:PyFlakeCheckers = 'pep8,mccabe,pyflakes'
+let g:PyFlakeDefaultComplexity = 10
+"let g:PyFlakeDisabledMessages = 'E501'
+let g:PyFlakeCWindow = 6
+let g:PyFlakeSigns = 1
+let g:PyFlakeMaxLineLength = 100
+let g:PyFlakeRangeCommand = 'Q'
+"Settings for flak8-------}}}
